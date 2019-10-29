@@ -8,14 +8,11 @@ import com.codingame.gameengine.module.entities.GraphicEntityModule;
 import com.google.inject.Inject;
 
 public class Referee extends AbstractReferee {
-    // Uncomment the line below and comment the line under it to create a Solo Game
-    // @Inject private SoloGameManager<Player> gameManager;
     @Inject private MultiplayerGameManager<Player> gameManager;
     @Inject private GraphicEntityModule graphicEntityModule;
 
     @Override
     public void init() {
-        // Initialize your game here.
     }
 
     @Override
@@ -28,7 +25,6 @@ public class Referee extends AbstractReferee {
         for (Player player : gameManager.getActivePlayers()) {
             try {
                 List<String> outputs = player.getOutputs();
-                // Check validity of the player output and compute the new game state
             } catch (TimeoutException e) {
                 player.deactivate(String.format("$%d timeout!", player.getIndex()));
             }
