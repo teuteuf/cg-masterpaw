@@ -1,6 +1,6 @@
 import com.codingame.gameengine.runner.MultiplayerGameRunner;
 
-public class SkeletonMain {
+public class MasterPawMain {
     public static void main(String[] args) {
         MultiplayerGameRunner gameRunner = new MultiplayerGameRunner();
 
